@@ -1,0 +1,45 @@
+.circularChart {
+  width: 30vw;
+  max-width: 110px;
+}
+
+.circleBg {
+  fill: none;
+  stroke: #d3d3d3;
+  stroke-width: 3.8;
+}
+
+.circle {
+  stroke: #73c056;
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  transition: all 1s;
+  animation: progress 1s linear 1s forwards;
+}
+.hideCircle {
+  transition: all 2s;
+  stroke-width: 0;
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 100 0;
+  }
+}
+
+.number {
+  font-size: 0.5em;
+  text-anchor: middle;
+  text-align: center;
+  font-weight: 900;
+}
+.name {
+  fill: black;
+  text-anchor: middle;
+  font-size: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+.disabledNumber {
+  color: #828282;
+}

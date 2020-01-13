@@ -1,0 +1,153 @@
+.centerFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ContainerItem {
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  background: #fdfdfe;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.12);
+  margin: 0 21px 8px;
+  transition: all 0.35s;
+}
+.ContainerItem:last-child {
+  margin-bottom: 10px;
+}
+
+.buttonContainer {
+  background: transparent;
+  border: transparent;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.containerGrid {
+  background: transparent;
+  border: transparent;
+  display: grid;
+  grid-template: 30px 1fr / 50px 1fr 30px;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+
+.itemFullHeigth {
+  height: 100%;
+}
+
+.resalted {
+  background: linear-gradient(
+    90deg,
+    #73c056 45.31%,
+    rgba(115, 192, 86, 0.8) 100%
+  );
+  color: white;
+}
+
+.number {
+  composes: centerFlex;
+  grid-row: 1 / 3;
+  width: 50px;
+  font-size: 22px;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    #73c056 45.31%,
+    rgba(115, 192, 86, 0.8) 100%
+  );
+  border-radius: 8px 0px 0px 8px;
+  transition: all 0.35s;
+}
+
+.mainInfo {
+  display: grid;
+  grid-template: 1fr /50% 50%;
+  align-self: self-end;
+  text-align: center;
+  transition: all 0.35s;
+}
+.mainInfoClosed {
+  transition: all 0.35s;
+  margin-bottom: -2px;
+}
+
+.name {
+  grid-area: 1 / 1 / span 1 / span 1;
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.amount {
+  grid-area: 1 /2 / span 1 / span 1;
+  align-self: center;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.extraContentHidden {
+  display: none;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4f4f4f;
+  transition: all 0.35s;
+  align-self: center;
+  margin-bottom: 8px;
+}
+.extraContentShown {
+  display: grid;
+  grid-template: 1fr / 55% 45%;
+  justify-items: center;
+  margin-top: 4px;
+  animation: textFocusIn 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+.extraContentShownResalted {
+  color: white;
+}
+
+.timeFormat {
+  margin-left: 4px;
+}
+.rateFormat {
+  white-space: pre;
+  align-self: center;
+}
+
+.chevron {
+  grid-area: 1 / 3 / span 1 / span 1;
+  justify-content: center;
+  align-self: flex-end;
+  margin-bottom: -2px;
+  transition: all 0.35s;
+  transform: rotate(0deg);
+}
+.chevronClicked {
+  transform: rotate(180deg);
+  composes: centerFlex;
+  margin-bottom: 0;
+  transition: all 0.35s;
+}
+
+@keyframes textFocusIn {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .containerTime {
+    width: 12vh;
+  }
+}

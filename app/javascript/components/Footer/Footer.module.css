@@ -1,0 +1,101 @@
+.footerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20%;
+}
+
+.arrowsContainer {
+  width: 23%;
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrowLeft {
+  width: 23%;
+  height: 42px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.circlesContainer {
+  margin-top: 10px;
+  width: 84px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+}
+.animateButton {
+  animation: shakeLeft 1s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
+    alternate;
+}
+
+.button:active {
+  transform: scale(1.1);
+}
+.buttonDisabled {
+  composes: button;
+  cursor: not-allowed;
+}
+.buttonDisabled:active {
+  transform: none;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #828282;
+}
+
+.circleHidden {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+
+.activeCircle {
+  background: #000000;
+}
+
+.arrowsSVG {
+  width: 30px;
+  height: 25px;
+}
+
+@keyframes shakeLeft {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+    transform-origin: 0 50%;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg) scale(1.5);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg) scale(1.5);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}

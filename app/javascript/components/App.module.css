@@ -1,0 +1,70 @@
+@import "../styles/font.css";
+
+html {
+  user-select: none;
+  outline: none;
+}
+
+button {
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+input {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.wrap {
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  background: linear-gradient(180deg, #fafafa 0%, #e7eaf1 100%);
+  width: 100%;
+  overflow: hidden;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  user-select: none;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .wrap {
+    border-radius: 8px;
+    max-width: 375px;
+    max-height: 812px;
+  }
+}

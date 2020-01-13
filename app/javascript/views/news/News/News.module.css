@@ -1,0 +1,24 @@
+.newsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 40px);
+  height: calc(80% - 88px);
+  padding: 20px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  height: 45%;
+  width: 80%;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 14px;
+}

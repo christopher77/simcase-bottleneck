@@ -1,0 +1,139 @@
+.buttonContainer1 {
+  position: absolute;
+  left: 29px;
+  top: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonContainer2 {
+  position: absolute;
+  left: 117px;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonContainer3 {
+  position: absolute;
+  left: 250px;
+  top: 169px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonContainer4 {
+  position: absolute;
+  left: 168px;
+  top: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonContainer5 {
+  position: absolute;
+  left: 46px;
+  top: 284px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  width: 45px;
+  height: 45px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 400;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 0.01%,
+    #ffffff 47.4%,
+    #ececec 100%
+  );
+  box-shadow: 0px 0px 4px 2px rgba(115, 192, 86, 0.8);
+  border-radius: 5px;
+  border-color: transparent;
+}
+
+.buttonCorrect {
+  composes: button;
+  animation: scaleCenter 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.buttonFail {
+  composes: button;
+  box-shadow: 0px 0px 4px 2px rgba(201, 20, 20, 0.8);
+  border-radius: 5px;
+  animation: shakeHorizontal 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.4s
+    both;
+  color: black;
+}
+
+.button sup {
+  vertical-align: super;
+  font-size: small;
+  position: relative;
+  left: 4px;
+  bottom: 8px;
+  color: #ff7070;
+}
+
+.capitalLetter:first-letter {
+  color: #73c056;
+  font-weight: bold;
+}
+
+.capitalWrong:first-letter {
+  color: #ff7070;
+  font-weight: bold;
+}
+
+.capitalLetter,
+.capitalWrong {
+  font-weight: 400;
+}
+
+@keyframes scaleCenter {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shakeHorizontal {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-4px);
+  }
+  20%,
+  40%,
+  60% {
+    transform: translateX(4px);
+  }
+  80% {
+    transform: translateX(1px);
+  }
+  90% {
+    transform: translateX(-1px);
+  }
+}

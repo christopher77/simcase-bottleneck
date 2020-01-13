@@ -1,0 +1,93 @@
+.mapGame {
+  display: grid;
+  grid-template: 1fr 1fr / 50% 50%;
+  height: inherit;
+  width: auto;
+}
+.mapContainer {
+  grid-area: 1 /1 / span 1 / span 2;
+  position: relative;
+  height: auto;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.map {
+  height: auto;
+  width: 314px;
+  margin-top: -10px;
+}
+.stationsContainer {
+  height: 358px;
+  width: 314px;
+  position: absolute;
+}
+.bottomLeft {
+  grid-area: 2 / 1 / span 1 / span 1;
+  justify-self: center;
+  align-self: center;
+  margin-left: 20px;
+}
+
+.bottomRight {
+  grid-area: 2 / 2 / span 1 / span 1;
+  align-self: center;
+  justify-self: center;
+  margin-top: -4px;
+}
+
+.submit {
+  background: #73c056;
+  box-shadow: 2px 1px 12px rgb(115, 192, 86, 0.8);
+  color: black;
+  border-radius: 32px;
+  width: 140px;
+  height: 42px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 17px;
+  border-color: transparent;
+}
+
+.submit:active {
+  transform: scale(1.1);
+}
+
+.buttonConfirm {
+  composes: submit;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+  margin-left: initial;
+  color: white;
+}
+.buttonConfirm:active {
+  transform: scale(1.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 2vh 20px 0;
+}
+
+.messageModal {
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.1rem;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 320px) {
+  .title {
+    display: none;
+  }
+}

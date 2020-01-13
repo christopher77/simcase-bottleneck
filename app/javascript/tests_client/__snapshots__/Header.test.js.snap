@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component 1`] = `
+<DocumentFragment>
+  <div
+    class="headerContainer"
+  >
+    <div
+      class="homebutton"
+    >
+      <img
+        class="logo"
+        src="[object Object]"
+      />
+    </div>
+    <h3
+      class="title"
+    >
+      Onboarding
+    </h3>
+  </div>
+</DocumentFragment>
+`;

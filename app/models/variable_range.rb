@@ -1,0 +1,3 @@
+class VariableRange < ApplicationRecord
+    
+end

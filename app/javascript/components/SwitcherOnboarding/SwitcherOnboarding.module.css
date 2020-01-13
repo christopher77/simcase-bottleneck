@@ -1,0 +1,89 @@
+.switchGame {
+  display: grid;
+  grid-template: 71vh 65px / 1fr;
+}
+.optionScreen {
+  grid-area: 1/1 / span 1 / span 1;
+  height: 80vh;
+}
+.switch {
+  grid-area: 2 /1 / span 1 / span 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  width: 100%;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch input:checked ~ label .toggler {
+  left: 0%;
+}
+
+.switch input + label .toggler {
+  left: 50%;
+}
+
+.switch label {
+  background: #ffffff;
+  border-radius: 50px;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.switch label .switchLabel {
+  padding: 0.25em;
+  min-height: 1em;
+  min-width: 1em;
+  text-align: center;
+  z-index: 1;
+  flex: 1;
+  transition: all 1s;
+  font-size: 18px;
+  line-height: 22px;
+  color: #828282;
+}
+.switch label .switchLabelSelected {
+  padding: 0.25em;
+  min-height: 1em;
+  min-width: 1em;
+  text-align: center;
+  z-index: 1;
+  flex: 1;
+  transition: all 0.5s;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  transition: all 1s;
+}
+.toggler {
+  position: absolute;
+  left: 0;
+  width: 51%;
+  height: 109%;
+  border-radius: 20px;
+  background: #73c056;
+  box-shadow: 2px 1px 12px rgba(115, 192, 86, 0.8);
+  transition: all 0.5s;
+}
+
+@media screen and (max-height: 568px) {
+  .switchGame {
+    display: grid;
+    grid-template: 1fr 65px / 1fr;
+  }
+}

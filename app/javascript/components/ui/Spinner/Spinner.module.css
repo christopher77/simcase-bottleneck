@@ -1,0 +1,25 @@
+.lazySpinner {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border: 3px solid rgba(19, 18, 18, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  margin: 0px 0px 0px -40px;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

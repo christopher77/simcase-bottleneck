@@ -1,0 +1,63 @@
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 15px 20px 3px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 20px 20px 3px;
+}
+.titleWhite {
+  composes: title;
+  color: white;
+}
+
+.buttonConfirm {
+  background: #73c056;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 47px;
+  color: black;
+  width: 10em;
+  height: 42px;
+  font-size: 14px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: bold;
+  border-color: transparent;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: initial;
+}
+.buttonCancel {
+  composes: buttonConfirm;
+  background: white;
+  color: #4f4f4f;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+  margin-top: 15px;
+}
+.buttonConfirm:active {
+  transform: scale(1.1);
+}
+.buttonCancel:active {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.homebutton {
+  cursor: pointer;
+}
+.messageModal {
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.1rem;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}

@@ -1,0 +1,80 @@
+.wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(156.22deg, #73c056 1.35%, #34a9b0 92.72%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5em 0px 3em;
+  animation: animateProfileGate 450ms ease 1;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.1em;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  margin: 0 1em 0;
+}
+
+.start {
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 47px;
+  color: black;
+  width: 10em;
+  height: 42px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: bold;
+  border-color: transparent;
+}
+
+.start:active {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+.leaderboard {
+  composes: start;
+  background-color: #73c056;
+  color: black;
+  padding: 0px;
+}
+
+.buttonsPosition {
+  display: flex;
+  flex-direction: column;
+  height: 18vh;
+  justify-content: inherit;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+@keyframes animateProfileGate {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .leaderboard {
+    margin-bottom: 3em;
+  }
+}

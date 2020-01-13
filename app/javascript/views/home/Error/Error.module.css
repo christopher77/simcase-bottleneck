@@ -1,0 +1,43 @@
+.wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(156.22deg, #73c056 1.35%, #34a9b0 92.72%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 112px 0px;
+}
+
+.svg {
+  position: absolute;
+  left: 31.25%;
+  top: 35.21%;
+  bottom: 40.26%;
+  z-index: 1;
+}
+
+.texts {
+  padding: 112px 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.paragraph {
+  font-size: 24px;
+  text-align: center;
+}
+
+.minititle {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24;
+  text-align: center;
+}

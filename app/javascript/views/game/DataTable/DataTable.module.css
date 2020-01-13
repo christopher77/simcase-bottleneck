@@ -1,0 +1,84 @@
+.dataTableView {
+  height: inherit;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template: 64px 1fr / 1fr;
+  height: inherit;
+  width: auto;
+}
+
+.message {
+  text-align: center;
+  margin: 0 21px 10px;
+  color: #4f4f4f;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.tableContainer {
+  align-self: normal;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 21px;
+}
+
+.list {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 55.8vh;
+}
+.listFeedback {
+  height: 61.8vh;
+}
+
+.demandContainer {
+  line-height: 30px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  margin-bottom: 15px;
+  margin-top: -3px;
+}
+
+.tons {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  width: 150px;
+}
+.tons > span {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  white-space: pre;
+}
+
+.demand {
+  text-transform: capitalize;
+  width: 150px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 10px;
+}
+
+/* .list::-webkit-scrollbar {
+  display: none;
+} */
+
+@media (min-width: 680px) {
+  .demandContainer {
+    padding-top: 5%;
+  }
+}

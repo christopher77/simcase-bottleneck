@@ -1,0 +1,96 @@
+.wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #FAFAFA 0%, #E7EAF1 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+svg {
+  left: 23.12%;
+  right: 23.38%;
+  top: 38.91%;
+  bottom: 39.44%;
+
+}
+/* animate wheels  */
+svg .backWheel{
+  transform-origin: 10%;
+  animation: jump 0.5s linear alternate infinite;
+}
+svg .frontWheel{
+  transform-origin: 0% 90%;
+  animation: jump 0.8s linear alternate infinite;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  40% {
+    transform: translate3d(0%, 0.5%, 0) scale3d(1, 1, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale3d(1, 0.95, 1);
+  }
+}
+/* animate continued lines  */
+
+.line1 {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 40;
+  animation: dash 1s linear infinite;
+}
+.line2 {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: dash2 1s linear infinite;
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: -40;
+  }
+  to {
+    stroke-dashoffset: 40;
+  }
+}
+@keyframes dash2 {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
+/* animate truck */
+svg .truck
+{
+  animation: bounce 20s ease-in infinite
+}
+
+@keyframes bounce {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(1px, 0, 0);
+  }
+}
